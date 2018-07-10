@@ -4,15 +4,17 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "my-command-identifier",
-      "script": "./my-command.js"
+      "name": "IconScope",
+      "identifier": "IconScope-identifier",
+      "script": "./index.js",
+      "shortcut": "cmd alt ctrl i"
     }
   ],
   "menu": {
     "title": "IconScope",
+    "isRoot" : true,
     "items": [
-      "my-command-identifier"
+      "IconScope-identifier"
     ]
   }
 }
