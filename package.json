@@ -1,6 +1,8 @@
 {
   "name": "iconscope",
   "version": "0.1.0",
+  "description": "Display Topographic Information",
+  "repository": "git@github.com:ziven27/Sketch-IconScope.git",
   "engines": {
     "sketch": ">=3.0"
   },
@@ -21,5 +23,5 @@
   "devDependencies": {
     "@skpm/builder": "^0.5.2"
   },
-  "author": "ziven27 <p_czhzheng@tencent.com>"
+  "author": "ziven27"
 }
