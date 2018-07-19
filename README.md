@@ -1,6 +1,6 @@
 # Icon Scope | 图标结界
 
-![iconScope-demo](./assets/scopeIcon.gif)
+![iconScope-demo](./img/scopeIcon.gif)
 
 `ctrl alt cmd i`
 

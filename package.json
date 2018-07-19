@@ -1,7 +1,7 @@
 {
   "name": "iconscope",
   "version": "0.1.1-0",
-  "description": "Display Topographic Information",
+  "description": "Wrap the Icon with a square(4n) scope",
   "repository": "git@github.com:ziven27/Sketch-IconScope.git",
   "engines": {
     "sketch": ">=3.0"
