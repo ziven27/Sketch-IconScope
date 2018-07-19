@@ -1,6 +1,6 @@
 {
   "name": "iconscope",
-  "version": "0.1.1-0",
+  "version": "1.0.0",
   "description": "Wrap the Icon with a square(4n) scope",
   "repository": "git@github.com:ziven27/Sketch-IconScope.git",
   "engines": {
