@@ -12,20 +12,16 @@ function IconScope(context) {
 
 	let layers = _utils.getSelectedLayers();
 
-	// 如果选中的是组本身，那么解组
-	if (layers.length == 1 && layers[0].name == groupName) {
-		let bgLayer = layers[0].layers[0];
-		if (bgLayer.name == bgName) {
-			bgLayer._object.removeFromParent();
-		}
-		layers[0]._object.ungroup();
-		_utils.msg("UnScope success 🙌");
-		return;
-	}
-
 	//啥都没选就什么都不做
 	if (!layers.length) {
 		_utils.msg("select something 🙌");
+		return;
+	}
+
+	// 如果选中的是组本身，那么解组
+	if (layers.length == 1 && layers[0].name == groupName) {
+		layers[0]._object.ungroup();
+		_utils.msg("UnScope success 🙌");
 		return;
 	}
 
@@ -40,16 +36,15 @@ function IconScope(context) {
 	}
 	// 计算出最合适的尺寸
 	let ajustInfo = _utils.getAjustInfo(container.frame);
-	//创建矩形
-	let shape = new Shape({
-		parent: container,
-		name: bgName,
-		// 不懂为什么这里不能设置x,y
-		frame: new Rectangle(ajustInfo.x, ajustInfo.y, ajustInfo.width, ajustInfo.height)
-	});
 
-	// 移动到最底层
-	shape.moveToBack();
+	//创建矩形
+	var slice = MSSliceLayer.new();
+	slice.frame().setX(ajustInfo.x);
+	slice.frame().setY(ajustInfo.y);
+	slice.frame().setWidth(ajustInfo.width);
+	slice.frame().setHeight(ajustInfo.height);
+	slice.setName(bgName);
+	container._object.addLayers([slice]);
 
 	// 让容器包含元素
 	container.adjustToFit();

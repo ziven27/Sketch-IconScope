@@ -439,9 +439,9 @@ utils.getAjustInfo = function(frame) {
 	let w = frame.width;
 	let h = frame.height;
 	let maxLen = (w > h) ? w : h;
-	let newW = Math.ceil((maxLen + 1) / 4) * 4;
-	let newX = Math.ceil((newW - w) / 2 * -1);
-	let newY = Math.ceil((newW - h) / 2 * -1);
+	let newW = Math.ceil(maxLen / 4) * 4;
+	let newX = (newW - w) / 2 * -1;
+	let newY = (newW - h) / 2 * -1;
 	return {
 		x: newX,
 		y: newY,
