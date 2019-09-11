@@ -10,5 +10,5 @@ Wrap the Icon with a square(4n) scope.
 
 ## Installation
 
-- [Download](../../releases/download/plugin.sketchplugin.zip) the latest release of the plugin
+- [Download](../../releases/latest/download/plugin.sketchplugin.zip) the latest release of the plugin
 - unzip and double click on the plugin.sketchplugin
